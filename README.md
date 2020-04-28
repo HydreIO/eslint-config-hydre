@@ -17,6 +17,9 @@
 
 ```sh
 npm install -D @sidy/eslint-config-sidy
+
+# or full
+npm install -D eslint babel-eslint @sidy/eslint-config-sidy
 ```
 
 ## Usage
@@ -28,14 +31,12 @@ env:
   node: true
   es6: true
 extends:
-  - eslint-config-sidy
+  - "@sidy/eslint-config-sidy"
 globals:
   Atomics: readonly
   SharedArrayBuffer: readonly
-parser: babel-eslint
+parser: babel-eslint # to use optional chaining and other cool stuff
 parserOptions:
   ecmaVersion: 2020
   sourceType: module
-  ecmaFeatures:
-    legacyDecorators: true
 ```
