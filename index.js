@@ -90,7 +90,7 @@ module.exports = {
     'no-fallthrough': 'off', // eslint:recommended
     'no-floating-decimal': 'error',
     'no-global-assign': 'error',
-    'no-implicit-coercion': 'error',
+    // 'no-implicit-coercion': 'off',
     'no-implicit-globals': 'error',
     'no-implied-eval': 'error',
     'no-invalid-this': 'error',
@@ -155,7 +155,7 @@ module.exports = {
     // Node.js and CommonJS
     // http://eslint.org/docs/rules/#nodejs-and-commonjs
     // -------------------------------------------------
-    'callback-return': 'error',
+    'callback-return': 'off',
     'global-require': 'error',
     'handle-callback-err': 'error',
     'no-buffer-constructor': 'error',
@@ -278,8 +278,8 @@ module.exports = {
     'semi': ['error', 'never'],
     'semi-spacing': 'error',
     'semi-style': ['error', 'first'],
-    'sort-keys': 'error',
-    'sort-vars': 'error',
+    // 'sort-keys': 'off',
+    // 'sort-vars': 'off',
     'space-before-blocks': 'error',
     'space-before-function-paren': [
       'error',
@@ -328,7 +328,7 @@ module.exports = {
     // 'prefer-template': 'off',
     'require-yield': 'error', // eslint:recommended
     'rest-spread-spacing': 'error',
-    'sort-imports': 'error',
+    // 'sort-imports': 'off',
     'symbol-description': 'error',
     'template-curly-spacing': ['error', 'always'],
     'yield-star-spacing': ['error', { before: false, after: true }],
