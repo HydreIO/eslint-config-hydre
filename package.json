@@ -8,7 +8,8 @@
   "type": "module",
   "scripts": {
     "lint": "eslint --color --fix .",
-    "test": "node test/index.js"
+    "test": "node test/index.js",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
