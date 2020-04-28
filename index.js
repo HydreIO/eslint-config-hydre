@@ -1,3 +1,16 @@
+/* eslint-disable max-lines */
+/* eslint-disable sort-keys */
+const MAX_COMPLEXITY = 10
+const INDENT_ONE = 1
+const INDENT_TWO = 2
+const MAX_DEPTH = 3
+const MAX_NESTED_CB = 3
+const MAX_PARAMS = 3
+const MAX_STATEMENTS_PER_LINE = 2
+const LINE_LEN = 80
+const MAX_LINE = 200
+const MAX_EMPTY_LINE = 2
+
 export default {
   rules: {
     // The rules below are listed in the order they appear on the eslint
@@ -44,15 +57,6 @@ export default {
     'no-unsafe-finally': 'error', // eslint:recommended
     'no-unsafe-negation': 'error', // eslint:recommended
     'use-isnan': 'error', // eslint:recommended
-    'valid-jsdoc': [
-      'error',
-      {
-        requireParamDescription: false,
-        requireReturnDescription: false,
-        requireReturn: false,
-        prefer: { returns: 'return' },
-      },
-    ],
     'valid-typeof': 'error', // eslint:recommended
 
     // Best Practices
@@ -63,13 +67,13 @@ export default {
     'array-callback-return': 'error',
     'block-scoped-var': 'error',
     'class-methods-use-this': 'error',
-    complexity: ['error', 10],
+    'complexity': ['error', MAX_COMPLEXITY],
     'consistent-return': 'error',
-    curly: ['error', 'multi-or-nest'],
+    'curly': ['error', 'multi-or-nest'],
     'default-case': 'error',
     'dot-location': 'error',
     'dot-notation': ['error', { allowKeywords: false }],
-    eqeqeq: 'error',
+    'eqeqeq': 'error',
     'guard-for-in': 'error',
     // 'no-alert': 'off',
     'no-caller': 'error',
@@ -126,7 +130,7 @@ export default {
     'require-await': 'error',
     // 'vars-on-top': 'off',
     'wrap-iife': 'error',
-    yoda: 'error',
+    'yoda': 'error',
 
     // Strict Mode
     // http://eslint.org/docs/rules/#strict-mode
@@ -137,7 +141,6 @@ export default {
     // http://eslint.org/docs/rules/#variables
     // ---------------------------------------
     'init-declarations': 'error',
-    'no-catch-shadow': 'error',
     'no-delete-var': 'error', // eslint:recommended
     'no-label-var': 'off',
     'no-restricted-globals': 'error',
@@ -172,7 +175,7 @@ export default {
     'array-element-newline': 'off', // eslint:recommended
     'block-spacing': ['error', 'always'],
     'brace-style': 'error',
-    camelcase: ['error', 'never'],
+    'camelcase': 'off',
     // 'capitalized-comments': 'off',
     'comma-dangle': ['error', 'always-multiline'],
     'comma-spacing': 'error',
@@ -187,24 +190,22 @@ export default {
     // 'id-blacklist': 'off',
     // 'id-length': 'off',
     // 'id-match': 'off',
-    indent: [
+    'indent': [
       'error',
-      2,
+      INDENT_TWO,
       {
-        CallExpression: {
-          arguments: 2,
-        },
+        CallExpression: { arguments: INDENT_TWO },
         FunctionDeclaration: {
-          body: 1,
-          parameters: 2,
+          body: INDENT_ONE,
+          parameters: INDENT_TWO,
         },
         FunctionExpression: {
-          body: 1,
-          parameters: 2,
+          body: INDENT_ONE,
+          parameters: INDENT_TWO,
         },
-        MemberExpression: 2,
-        ObjectExpression: 1,
-        SwitchCase: 1,
+        MemberExpression: INDENT_TWO,
+        ObjectExpression: INDENT_ONE,
+        SwitchCase: INDENT_ONE,
         ignoredNodes: ['ConditionalExpression'],
       },
     ],
@@ -214,23 +215,23 @@ export default {
     // 'line-comment-position': 'off',
     'linebreak-style': 'error',
     // 'lines-around-comment': 'off',
-    'max-depth': ['warn', 3],
+    'max-depth': ['warn', MAX_DEPTH],
     'max-len': [
       'error',
       {
-        code: 80,
-        tabWidth: 2,
+        code: LINE_LEN,
+        tabWidth: MAX_STATEMENTS_PER_LINE,
         ignoreUrls: true,
       },
     ],
     'max-lines': [
       'error',
-      { max: 200, skipBlankLines: true, skipComments: true },
+      { max: MAX_LINE, skipBlankLines: true, skipComments: true },
     ],
-    'max-nested-callbacks': ['error', 3],
-    'max-params': ['error', 3],
+    'max-nested-callbacks': ['error', MAX_NESTED_CB],
+    'max-params': ['error', MAX_PARAMS],
     // 'max-statements': 'off',
-    'max-statements-per-line': ['error', 2],
+    'max-statements-per-line': ['error', { max: MAX_STATEMENTS_PER_LINE }],
     // 'multiline-ternary': 'off',
     'new-cap': 'error',
     // 'new-parens': 'off',
@@ -243,7 +244,7 @@ export default {
     // 'no-mixed-operators': 'off',
     'no-mixed-spaces-and-tabs': 'error', // eslint:recommended
     'no-multi-assign': 'error',
-    'no-multiple-empty-lines': ['error', { max: 2 }],
+    'no-multiple-empty-lines': ['error', { max: MAX_EMPTY_LINE }],
     // 'no-negated-condition': 'off',
     'no-nested-ternary': 'error',
     'no-new-object': 'error',
@@ -273,18 +274,8 @@ export default {
     'padded-blocks': ['error', 'never'],
     // 'padding-line-between-statements': 'off',
     'quote-props': ['error', 'consistent'],
-    quotes: ['error', 'single', { allowTemplateLiterals: true }],
-    'require-jsdoc': [
-      'error',
-      {
-        require: {
-          FunctionDeclaration: true,
-          MethodDefinition: true,
-          ClassDeclaration: true,
-        },
-      },
-    ],
-    semi: 'error',
+    'quotes': ['error', 'single', { allowTemplateLiterals: true }],
+    'semi': ['error', 'never'],
     'semi-spacing': 'error',
     'semi-style': ['error', 'first'],
     'sort-keys': 'error',
