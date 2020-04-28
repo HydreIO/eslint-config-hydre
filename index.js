@@ -11,7 +11,7 @@ const LINE_LEN = 80
 const MAX_LINE = 200
 const MAX_EMPTY_LINE = 2
 
-export default {
+module.exports = {
   rules: {
     // The rules below are listed in the order they appear on the eslint
     // rules page. All rules are listed to make it easier to keep in sync
