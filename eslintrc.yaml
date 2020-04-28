@@ -1,0 +1,101 @@
+env:
+  node: true
+  es6: true
+extends:
+  - eslint:recommended
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+parser: babel-eslint
+parserOptions:
+  ecmaVersion: 2020
+  sourceType: module
+  ecmaFeatures:
+    legacyDecorators: true
+rules:
+  quotes:
+    ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }]
+  default-case: 2
+  no-param-reassign: 2
+  lines-between-class-members: ['warn', always, { exceptAfterSingleLine: true }]
+  object-curly-newline: ['error', { multiline: true }]
+  object-curly-spacing:
+    - error
+    - always
+  arrow-parens:
+    - error
+    - as-needed
+  no-empty: ['error', { allowEmptyCatch: true }]
+  func-style:
+    - error
+    - expression
+  no-extra-parens: 2
+  no-sparse-arrays: 0
+  require-atomic-updates: 2
+  no-var: 2
+  no-implicit-globals: 2
+  class-methods-use-this: 2
+  complexity:
+    - error
+    - 10
+  curly:
+    - error
+    - multi-or-nest
+  max-params:
+    - error
+    - 1
+  max-depth:
+    - warn
+    - 3
+  dot-location: 2
+  dot-notation: ['error', { allowKeywords: false }]
+  eqeqeq: 2
+  max-classes-per-file: 2
+  no-caller: 2
+  no-case-declarations: 0
+  no-constructor-return: 2
+  no-else-return: 2
+  no-empty-function: ['error', { allow: ['arrowFunctions'] }]
+  no-eval: 2
+  no-extend-native: 2
+  no-extra-bind: 2
+  no-extra-label: 2
+  no-fallthrough: 0
+  no-floating-decimal: 2
+  no-invalid-this: 2
+  no-iterator: 2
+  no-lone-blocks: 2
+  no-loop-func: 2
+  no-magic-numbers: 2
+  no-multi-spaces: 2
+  no-new: 2
+  no-new-func: 2
+  no-new-wrappers: 2
+  no-octal: 2
+  no-octal-escape: 2
+  no-proto: 2
+  no-restricted-properties: 2
+  no-return-assign: 2
+  no-return-await: 2
+  no-script-url: 2
+  no-self-compare: 2
+  no-sequences: 2
+  no-unmodified-loop-condition: 2
+  no-unused-expressions: 2
+  no-useless-call: 2
+  no-useless-concat: 2
+  no-useless-return: 2
+  wrap-iife: 2
+  yoda: 2
+  no-shadow: 2
+  no-undef-init: 2
+  no-undefined: 2
+  no-use-before-define: 2
+  generator-star-spacing: ['error', {before: false, after: true}]
+  yield-star-spacing: ['error', {before: false, after: true}]
+  no-useless-rename: 2
+  prefer-arrow-callback: 2
+  prefer-destructuring: 2
+  prefer-spread: 2
+  sort-imports: 2
+  symbol-description: 2

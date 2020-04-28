@@ -1,0 +1,32 @@
+{
+  "name": "@sidy/eslint-config-sidy",
+  "version": "1.0.0",
+  "description": "A strict opinionated ESLint shareable config for the Sidy JavaScript style guide",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/usidy/eslint-config-sidy.git"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "sidy"
+  ],
+	"publishConfig": {
+		"access": "public"
+	},
+  "author": "sidy",
+  "bugs": {
+    "url": "https://github.com/usidy/eslint-config-sidy/issues"
+  },
+  "homepage": "https://github.com/usidy/eslint-config-sidy#readme",
+  "dependencies": {
+    "eslint": "^6.8.0"
+  },
+  "peerDependencies": {
+    "eslint": ">= 3"
+  }
+}
