@@ -1,8 +1,10 @@
 {
   "name": "@sidy/eslint-config-sidy",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A strict opinionated ESLint shareable config for the Sidy JavaScript style guide",
-  "files": ["index.js"],
+  "files": [
+    "index.js"
+  ],
   "type": "module",
   "scripts": {
     "lint": "eslint --color --fix .",
@@ -17,7 +19,7 @@
     "eslintconfig",
     "sidy"
   ],
-	"license": "UNLICENSE",
+  "license": "UNLICENSE",
   "publishConfig": {
     "access": "public"
   },
