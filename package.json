@@ -17,6 +17,7 @@
     "eslintconfig",
     "sidy"
   ],
+	"license": "UNLICENSE",
   "publishConfig": {
     "access": "public"
   },
