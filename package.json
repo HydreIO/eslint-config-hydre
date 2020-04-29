@@ -3,10 +3,11 @@
   "version": "1.2.2",
   "description": "A strict opinionated ESLint shareable config for the Sidy JavaScript style guide",
   "files": [
-    "index.js"
+    "eslintrc.js"
   ],
   "scripts": {
     "test": "node test/index.js",
+    "lint": "eslint --no-ignore --env node --parser-options=ecmaVersion:11 --fix .",
     "postversion": "git push && git push --tags"
   },
   "repository": {

@@ -6,10 +6,13 @@ const INDENT_TWO = 2
 const MAX_DEPTH = 3
 const MAX_NESTED_CB = 3
 const MAX_PARAMS = 3
+const TAB_WIDTH = 2
 const MAX_STATEMENTS_PER_LINE = 2
 const LINE_LEN = 80
 const MAX_LINE = 200
 const MAX_EMPTY_LINE = 2
+const MIN_PROPERTY_EXPRESSION = 1
+const MIN_PROPERTY_EXPORT = 3
 
 module.exports = {
   rules: {
@@ -37,7 +40,9 @@ module.exports = {
     'no-dupe-args': 'error', // eslint:recommended
     'no-dupe-keys': 'error', // eslint:recommended
     'no-duplicate-case': 'error', // eslint:recommended
-    'no-empty': ['error', { allowEmptyCatch: true }],
+    'no-empty': ['error', {
+      allowEmptyCatch: true,
+    }],
     'no-empty-character-class': 'error', // eslint:recommended
     'no-ex-assign': 'error', // eslint:recommended
     'no-extra-boolean-cast': 'error', // eslint:recommended
@@ -71,8 +76,10 @@ module.exports = {
     'consistent-return': 'error',
     'curly': ['error', 'multi-or-nest'],
     'default-case': 'error',
-    'dot-location': 'error',
-    'dot-notation': ['error', { allowKeywords: false }],
+    'dot-location': ['error', 'property'],
+    'dot-notation': ['error', {
+      allowKeywords: false,
+    }],
     'eqeqeq': 'error',
     'guard-for-in': 'error',
     // 'no-alert': 'off',
@@ -80,7 +87,9 @@ module.exports = {
     'no-case-declarations': 'off', // eslint:recommended
     // 'no-div-regex': 'off',
     'no-else-return': 'error',
-    'no-empty-function': ['error', { allow: ['arrowFunctions'] }],
+    'no-empty-function': ['error', {
+      allow: ['arrowFunctions'],
+    }],
     'no-empty-pattern': 'error', // eslint:recommended
     'no-eq-null': 'error',
     'no-eval': 'error',
@@ -149,7 +158,9 @@ module.exports = {
     'no-undef': 'error', // eslint:recommended
     'no-undef-init': 'error',
     'no-undefined': 'error',
-    'no-unused-vars': ['error', { args: 'none' }], // eslint:recommended
+    'no-unused-vars': ['error', {
+      args: 'none',
+    }], // eslint:recommended
     'no-use-before-define': 'error',
 
     // Node.js and CommonJS
@@ -194,7 +205,9 @@ module.exports = {
       'error',
       INDENT_TWO,
       {
-        CallExpression: { arguments: INDENT_TWO },
+        CallExpression: {
+          arguments: INDENT_TWO,
+        },
         FunctionDeclaration: {
           body: INDENT_ONE,
           parameters: INDENT_TWO,
@@ -220,18 +233,24 @@ module.exports = {
       'error',
       {
         code: LINE_LEN,
-        tabWidth: MAX_STATEMENTS_PER_LINE,
+        tabWidth: TAB_WIDTH,
         ignoreUrls: true,
       },
     ],
     'max-lines': [
       'error',
-      { max: MAX_LINE, skipBlankLines: true, skipComments: true },
+      {
+        max: MAX_LINE,
+        skipBlankLines: true,
+        skipComments: true,
+      },
     ],
     'max-nested-callbacks': ['error', MAX_NESTED_CB],
     'max-params': ['error', MAX_PARAMS],
     // 'max-statements': 'off',
-    'max-statements-per-line': ['error', { max: MAX_STATEMENTS_PER_LINE }],
+    'max-statements-per-line': ['error', {
+      max: MAX_STATEMENTS_PER_LINE,
+    }],
     // 'multiline-ternary': 'off',
     'new-cap': 'error',
     // 'new-parens': 'off',
@@ -244,7 +263,9 @@ module.exports = {
     // 'no-mixed-operators': 'off',
     'no-mixed-spaces-and-tabs': 'error', // eslint:recommended
     'no-multi-assign': 'error',
-    'no-multiple-empty-lines': ['error', { max: MAX_EMPTY_LINE }],
+    'no-multiple-empty-lines': ['error', {
+      max: MAX_EMPTY_LINE,
+    }],
     // 'no-negated-condition': 'off',
     'no-nested-ternary': 'error',
     'no-new-object': 'error',
@@ -257,9 +278,26 @@ module.exports = {
     'no-unneeded-ternary': 'error',
     'no-whitespace-before-property': 'error',
     // 'nonblock-statement-body-position': 'off',
-    'object-curly-newline': ['error', { multiline: true }],
+    'object-curly-newline': [
+      'error',
+      {
+        ObjectExpression: {
+          minProperties: MIN_PROPERTY_EXPRESSION,
+        },
+        ObjectPattern: {
+          minProperties: MIN_PROPERTY_EXPRESSION,
+        },
+        ImportDeclaration: {
+          minProperties: MIN_PROPERTY_EXPRESSION,
+        },
+        ExportDeclaration: {
+          multiline: true,
+          minProperties: MIN_PROPERTY_EXPORT,
+        },
+      },
+    ],
     'object-curly-spacing': ['error', 'always'],
-    // 'object-property-newline': 'off',
+    'object-property-newline': 'error',
     'one-var': [
       'error',
       {
@@ -274,7 +312,9 @@ module.exports = {
     'padded-blocks': ['error', 'never'],
     // 'padding-line-between-statements': 'off',
     'quote-props': ['error', 'consistent'],
-    'quotes': ['error', 'single', { allowTemplateLiterals: true }],
+    'quotes': ['error', 'single', {
+      allowTemplateLiterals: true,
+    }],
     'semi': ['error', 'never'],
     'semi-spacing': 'error',
     'semi-style': ['error', 'first'],
@@ -305,7 +345,10 @@ module.exports = {
     'arrow-parens': ['error', 'as-needed'],
     // 'arrow-spacing': 'off',
     'constructor-super': 'error', // eslint:recommended
-    'generator-star-spacing': ['error', { before: false, after: true }],
+    'generator-star-spacing': ['error', {
+      before: false,
+      after: true,
+    }],
     'no-class-assign': 'error',
     'no-confusing-arrow': 'error',
     'no-const-assign': 'error', // eslint:recommended
@@ -320,7 +363,9 @@ module.exports = {
     'no-var': 'error',
     'object-shorthand': 'error',
     'prefer-arrow-callback': 'error',
-    'prefer-const': ['error', { destructuring: 'all' }],
+    'prefer-const': ['error', {
+      destructuring: 'all',
+    }],
     'prefer-destructuring': 'error',
     'prefer-numeric-literals': 'error',
     'prefer-rest-params': 'error',
@@ -331,7 +376,10 @@ module.exports = {
     // 'sort-imports': 'off',
     'symbol-description': 'error',
     'template-curly-spacing': ['error', 'always'],
-    'yield-star-spacing': ['error', { before: false, after: true }],
+    'yield-star-spacing': ['error', {
+      before: false,
+      after: true,
+    }],
 
     // ==========================
     // additional rules
@@ -340,7 +388,9 @@ module.exports = {
     'lines-between-class-members': [
       'warn',
       'always',
-      { exceptAfterSingleLine: true },
+      {
+        exceptAfterSingleLine: true,
+      },
     ],
     'require-atomic-updates': 'error',
     'max-classes-per-file': 'error',
