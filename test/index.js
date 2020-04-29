@@ -1,12 +1,12 @@
 const assert = require('assert')
 const eslint = require('eslint')
-const conf = require('../.eslintrc.js')
+const conf = require('../')
 
 const ECMA_VERSION = 11
 const ALLOWED_ERRORS = 0
 
 // The source files to lint.
-const repoFiles = ['eslintrc.js', 'test/index.js']
+const repoFiles = ['index.js', 'test/index.js']
 
 // Use the rules defined in this repo to test against.
 const eslintOpts = {

@@ -3,7 +3,7 @@
   "version": "1.2.3",
   "description": "A strict opinionated ESLint shareable config for the Sidy JavaScript style guide",
   "files": [
-    "eslintrc.js"
+    "index.js"
   ],
   "scripts": {
     "test": "node test/index.js",
