@@ -1,6 +1,6 @@
 const assert = require('assert')
 const eslint = require('eslint')
-const conf = require('../')
+const config = require('../')
 
 const ECMA_VERSION = 11
 const ALLOWED_ERRORS = 0
@@ -9,18 +9,19 @@ const ALLOWED_ERRORS = 0
 const repoFiles = ['index.js', 'test/index.js']
 
 // Use the rules defined in this repo to test against.
-const eslintOpts = {
+const eslintOptions = {
   envs: ['node', 'es6'],
   parserOptions: {
     ecmaVersion: ECMA_VERSION,
   },
-  rules: conf.rules,
+  rules: config.rules,
   useEslintrc: false,
   ignore: false,
+  plugins: ['eslint-plugin-unicorn'],
 }
 
 // Runs the linter on the repo files and asserts no errors were found.
-const report = new eslint.CLIEngine(eslintOpts).executeOnFiles(repoFiles)
+const report = new eslint.CLIEngine(eslintOptions).executeOnFiles(repoFiles)
 assert.equal(report.errorCount, ALLOWED_ERRORS)
 assert.equal(report.warningCount, ALLOWED_ERRORS)
 repoFiles.forEach((file, index) => {

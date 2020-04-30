@@ -29,9 +29,11 @@
   },
   "homepage": "https://github.com/usidy/eslint-config-sidy#readme",
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "eslint-plugin-unicorn": "^19.0.1"
   },
   "peerDependencies": {
-    "eslint": ">=6"
+    "eslint": ">=6",
+    "eslint-plugin-unicorn": ">19"
   }
 }

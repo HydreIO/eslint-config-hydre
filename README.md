@@ -19,7 +19,7 @@
 npm install -D @sidy/eslint-config-sidy
 
 # or full
-npm install -D eslint babel-eslint @sidy/eslint-config-sidy
+npm install -D eslint babel-eslint eslint-plugin-unicorn @sidy/eslint-config-sidy
 ```
 
 ## Usage
@@ -30,6 +30,8 @@ Add to your `.eslintrc.yml` file
 env:
   node: true
   es6: true
+plugins:
+  - unicorn
 extends:
   - "@sidy/eslint-config-sidy"
 globals:
