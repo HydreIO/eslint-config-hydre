@@ -108,7 +108,7 @@ module.exports = {
     'no-lone-blocks': 'error',
     'no-loop-func': 'error',
     'no-magic-numbers': ['error', {
-      ignore: [1, 0],
+      ignore: [1, 0, -1],
     }],
     'no-multi-spaces': 'error',
     'no-multi-str': 'error',
