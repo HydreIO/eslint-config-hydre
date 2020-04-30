@@ -343,7 +343,10 @@ module.exports = {
     // ------------------------------------------
     // 'arrow-body-style': 'off',
     'arrow-parens': ['error', 'as-needed'],
-    // 'arrow-spacing': 'off',
+    'arrow-spacing': ['error', {
+      before: true,
+      after: true,
+    }],
     'constructor-super': 'error', // eslint:recommended
     'generator-star-spacing': ['error', {
       before: false,
