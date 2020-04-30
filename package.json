@@ -1,6 +1,6 @@
 {
   "name": "@sidy/eslint-config-sidy",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "A strict opinionated ESLint shareable config for the Sidy JavaScript style guide",
   "files": [
     "index.js"
