@@ -77,9 +77,7 @@ module.exports = {
     'curly': ['error', 'multi-or-nest'],
     'default-case': 'error',
     'dot-location': ['error', 'property'],
-    'dot-notation': ['error', {
-      allowKeywords: false,
-    }],
+    'dot-notation': 'error',
     'eqeqeq': 'error',
     'guard-for-in': 'error',
     // 'no-alert': 'off',
