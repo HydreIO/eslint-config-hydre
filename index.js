@@ -409,8 +409,8 @@ module.exports = {
     'constructor-super'     : 'error', // eslint:recommended
     'generator-star-spacing': ['error',
       {
-        before: false,
-        after : true,
+        before: true,
+        after : false,
       }],
     'no-class-assign'        : 'error',
     'no-confusing-arrow'     : 'error',
