@@ -115,7 +115,7 @@ module.exports = {
         ignore: [1, 0, -1],
       }],
     'no-multi-spaces'             : 'error',
-    'no-multi-str'                : 'error',
+    // 'no-multi-str'                : 'off',
     'no-new'                      : 'error',
     'no-new-func'                 : 'error',
     'no-new-wrappers'             : 'error',
