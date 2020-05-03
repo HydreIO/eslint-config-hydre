@@ -142,7 +142,7 @@ module.exports = {
     'no-with'                     : 'error',
     'prefer-promise-reject-errors': 'error',
     // 'radix': 'off',
-    'require-await'               : 'error',
+    'require-await'               : 'off', // broken with async generators
     // 'vars-on-top': 'off',
     'wrap-iife'                   : 'error',
     'yoda'                        : 'error',
