@@ -166,7 +166,7 @@ module.exports = {
     // 'no-undefined': 'off',
     'no-unused-vars'            : ['error',
       {
-        args: 'after-used',
+        args              : 'after-used',
         ignoreRestSiblings: true,
       }], // eslint:recommended
     'no-use-before-define': 'error',
