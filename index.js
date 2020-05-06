@@ -13,7 +13,7 @@ const MAX_LINE = 200
 const MAX_EMPTY_LINE = 2
 const CURLY_NEW_LINE = {
   multiline    : true,
-  minProperties: 1,
+  minProperties: 2,
   consistent   : false,
 }
 
@@ -344,9 +344,24 @@ module.exports = {
         next     : 'class',
       },
       {
-        blankLine: 'never',
-        prev     : 'const',
+        blankLine: 'always',
+        prev     : '*',
         next     : 'const',
+      },
+      {
+        blankLine: 'always',
+        prev     : 'const',
+        next     : '*',
+      },
+      {
+        blankLine: 'always',
+        prev     : '*',
+        next     : 'let',
+      },
+      {
+        blankLine: 'always',
+        prev     : 'let',
+        next     : '*',
       },
       {
         blankLine: 'never',
@@ -354,14 +369,9 @@ module.exports = {
         next     : 'let',
       },
       {
-        blankLine: 'always',
-        prev     : 'let',
-        next     : 'const',
-      },
-      {
-        blankLine: 'always',
+        blankLine: 'never',
         prev     : 'const',
-        next     : 'let',
+        next     : 'const',
       },
     ],
     'quote-props': ['error', 'consistent'],
