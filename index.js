@@ -32,21 +32,18 @@ module.exports = {
     // Possible Errors
     // http://eslint.org/docs/rules/#possible-errors
     // ---------------------------------------------
-    'for-direction'        : 'error',
+    'for-direction'              : 'error',
     // 'no-await-in-loop': 'off',
-    'no-compare-neg-zero'  : 'error', // eslint:recommended
-    'no-cond-assign'       : 'error', // eslint:recommended
+    'no-compare-neg-zero'        : 'error', // eslint:recommended
+    'no-cond-assign'             : 'error', // eslint:recommended
     // 'no-console': 'error', // eslint:recommended
-    'no-constant-condition': 'error', // eslint:recommended
-    'no-control-regex'     : 'error', // eslint:recommended
-    'no-debugger'          : 'error', // eslint:recommended
-    'no-dupe-args'         : 'error', // eslint:recommended
-    'no-dupe-keys'         : 'error', // eslint:recommended
-    'no-duplicate-case'    : 'error', // eslint:recommended
-    'no-empty'             : ['error',
-      {
-        allowEmptyCatch: true,
-      }],
+    'no-constant-condition'      : 'error', // eslint:recommended
+    'no-control-regex'           : 'error', // eslint:recommended
+    'no-debugger'                : 'error', // eslint:recommended
+    'no-dupe-args'               : 'error', // eslint:recommended
+    'no-dupe-keys'               : 'error', // eslint:recommended
+    'no-duplicate-case'          : 'error', // eslint:recommended
+    'no-empty'                   : ['error', { allowEmptyCatch: true }],
     'no-empty-character-class'   : 'error', // eslint:recommended
     'no-ex-assign'               : 'error', // eslint:recommended
     'no-extra-boolean-cast'      : 'error', // eslint:recommended
@@ -73,47 +70,41 @@ module.exports = {
     // --------------------------------------------
 
     // 'accessor-pairs': 'off',
-    'array-callback-return' : 'error',
-    'block-scoped-var'      : 'error',
-    'class-methods-use-this': 'error',
-    'complexity'            : ['error', MAX_COMPLEXITY],
-    'consistent-return'     : 'error',
-    'curly'                 : ['error', 'multi-or-nest'],
-    'default-case'          : 'error',
-    'dot-location'          : ['error', 'property'],
-    'dot-notation'          : 'error',
-    'eqeqeq'                : 'error',
-    'guard-for-in'          : 'error',
+    'array-callback-return'       : 'error',
+    'block-scoped-var'            : 'error',
+    'class-methods-use-this'      : 'error',
+    'complexity'                  : ['error', MAX_COMPLEXITY],
+    'consistent-return'           : 'error',
+    'curly'                       : ['error', 'multi-or-nest'],
+    'default-case'                : 'error',
+    'dot-location'                : ['error', 'property'],
+    'dot-notation'                : 'error',
+    'eqeqeq'                      : 'error',
+    'guard-for-in'                : 'error',
     // 'no-alert': 'off',
-    'no-caller'             : 'error',
-    'no-case-declarations'  : 'off', // eslint:recommended
+    'no-caller'                   : 'error',
+    'no-case-declarations'        : 'off', // eslint:recommended
     // 'no-div-regex': 'off',
-    'no-else-return'        : 'error',
-    'no-empty-function'     : ['error',
-      {
-        allow: ['arrowFunctions'],
-      }],
-    'no-empty-pattern'   : 'error', // eslint:recommended
-    'no-eq-null'         : 'error',
-    'no-eval'            : 'error',
-    'no-extend-native'   : 'error',
-    'no-extra-bind'      : 'error',
-    'no-extra-label'     : 'error',
-    'no-fallthrough'     : 'off', // eslint:recommended
-    'no-floating-decimal': 'error',
-    'no-global-assign'   : 'error',
+    'no-else-return'              : 'error',
+    'no-empty-function'           : ['error', { allow: ['arrowFunctions'] }],
+    'no-empty-pattern'            : 'error', // eslint:recommended
+    'no-eq-null'                  : 'error',
+    'no-eval'                     : 'error',
+    'no-extend-native'            : 'error',
+    'no-extra-bind'               : 'error',
+    'no-extra-label'              : 'error',
+    'no-fallthrough'              : 'off', // eslint:recommended
+    'no-floating-decimal'         : 'error',
+    'no-global-assign'            : 'error',
     // 'no-implicit-coercion': 'off',
-    'no-implicit-globals': 'error',
-    'no-implied-eval'    : 'error',
-    'no-invalid-this'    : 'error',
-    'no-iterator'        : 'error',
+    'no-implicit-globals'         : 'error',
+    'no-implied-eval'             : 'error',
+    'no-invalid-this'             : 'error',
+    'no-iterator'                 : 'error',
     // 'no-labels': 'off',
-    'no-lone-blocks'     : 'error',
-    'no-loop-func'       : 'error',
-    'no-magic-numbers'   : ['error',
-      {
-        ignore: [1, 0, -1],
-      }],
+    'no-lone-blocks'              : 'error',
+    'no-loop-func'                : 'error',
+    'no-magic-numbers'            : ['error', { ignore: [1, 0, -1] }],
     'no-multi-spaces'             : 'error',
     // 'no-multi-str'                : 'off',
     'no-new'                      : 'error',
@@ -217,9 +208,7 @@ module.exports = {
       'error',
       INDENT_TWO,
       {
-        CallExpression: {
-          arguments: INDENT_TWO,
-        },
+        CallExpression     : { arguments: INDENT_TWO },
         FunctionDeclaration: {
           body      : INDENT_ONE,
           parameters: INDENT_TWO,
@@ -266,29 +255,24 @@ module.exports = {
         skipComments  : true,
       },
     ],
-    'max-nested-callbacks'   : ['error', MAX_NESTED_CB],
-    'max-params'             : ['error', MAX_PARAMS],
+    'max-nested-callbacks'         : ['error', MAX_NESTED_CB],
+    'max-params'                   : ['error', MAX_PARAMS],
     // 'max-statements': 'off',
-    'max-statements-per-line': ['error',
-      {
-        max: MAX_STATEMENTS_PER_LINE,
-      }],
+    'max-statements-per-line':
+      ['error', { max: MAX_STATEMENTS_PER_LINE }],
     // 'multiline-ternary': 'off',
-    'new-cap'                 : 'error',
+    'new-cap'                      : 'error',
     // 'new-parens': 'off',
-    'newline-per-chained-call': 'error',
-    'no-array-constructor'    : 'error',
+    'newline-per-chained-call'     : 'error',
+    'no-array-constructor'         : 'error',
     // 'no-bitwise': 'off',
     // 'no-continue': 'off',
     // 'no-inline-comments': 'off',
     // 'no-lonely-if': 'off',
     // 'no-mixed-operators': 'off',
-    'no-mixed-spaces-and-tabs': 'error', // eslint:recommended
-    'no-multi-assign'         : 'error',
-    'no-multiple-empty-lines' : ['error',
-      {
-        max: MAX_EMPTY_LINE,
-      }],
+    'no-mixed-spaces-and-tabs'     : 'error', // eslint:recommended
+    'no-multi-assign'              : 'error',
+    'no-multiple-empty-lines'      : ['error', { max: MAX_EMPTY_LINE }],
     // 'no-negated-condition': 'off',
     'no-nested-ternary'            : 'error',
     'no-new-object'                : 'error',
@@ -311,10 +295,8 @@ module.exports = {
       },
     ],
     'object-curly-spacing'   : ['error', 'always'],
-    'object-property-newline': ['error',
-      {
-        allowAllPropertiesOnSameLine: false,
-      }],
+    'object-property-newline':
+      ['error', { allowAllPropertiesOnSameLine: false }],
     'one-var': [
       'error',
       {
@@ -375,21 +357,15 @@ module.exports = {
       },
     ],
     'quote-props': ['error', 'consistent'],
-    'quotes'     : ['error',
-      'single',
-      {
-        allowTemplateLiterals: true,
-      }],
-    'semi'                  : ['error', 'never'],
-    'semi-spacing'          : 'error',
-    'semi-style'            : ['error', 'first'],
+    'quotes'     :
+      ['error', 'single', { allowTemplateLiterals: true }],
+    'semi'                       : ['error', 'never'],
+    'semi-spacing'               : 'error',
+    'semi-style'                 : ['error', 'first'],
     // 'sort-keys': 'off',
     // 'sort-vars': 'off',
-    'space-before-blocks'   : 'error',
-    'function-paren-newline': ['error',
-      {
-        minItems: 3,
-      }],
+    'space-before-blocks'        : 'error',
+    'function-paren-newline'     : ['error', { minItems: 3 }],
     'space-before-function-paren': [
       'error',
       {
@@ -437,10 +413,7 @@ module.exports = {
     'no-var'                 : 'error',
     'object-shorthand'       : 'error',
     'prefer-arrow-callback'  : 'error',
-    'prefer-const'           : ['error',
-      {
-        destructuring: 'all',
-      }],
+    'prefer-const'           : ['error', { destructuring: 'all' }],
     'prefer-destructuring'   : 'error',
     'prefer-numeric-literals': 'error',
     'prefer-rest-params'     : 'error',
@@ -462,11 +435,7 @@ module.exports = {
     // ==========================
 
     'lines-between-class-members': [
-      'error',
-      'always',
-      {
-        exceptAfterSingleLine: true,
-      },
+      'error', 'always', { exceptAfterSingleLine: true },
     ],
     'require-atomic-updates': 'error',
     'max-classes-per-file'  : 'error',
@@ -478,18 +447,16 @@ module.exports = {
     // optionaly using the eslint-plugin-unicorn
     // ==========================
 
-    'unicorn/better-regex'               : 'error',
-    'unicorn/catch-error-name'           : 'error',
+    'unicorn/better-regex'                     : 'error',
+    'unicorn/catch-error-name'                 : 'error',
     'unicorn/consistent-function-scoping': 'error',
-    'unicorn/custom-error-definition'    : 'error',
-    'unicorn/error-message'              : 'error',
-    'unicorn/escape-case'                : 'error',
-    'unicorn/expiring-todo-comments'     : 'error',
+    'unicorn/custom-error-definition'          : 'error',
+    'unicorn/error-message'                    : 'error',
+    'unicorn/escape-case'                      : 'error',
+    'unicorn/expiring-todo-comments'           : 'error',
     // 'unicorn/explicit-length-check': 'error',
-    'unicorn/filename-case'              : ['error',
-      {
-        case: 'snakeCase',
-      }],
+    'unicorn/filename-case'              :
+      ['error', { case: 'snakeCase' }],
     // 'unicorn/import-index': 'error', // esm
     'unicorn/new-for-builtins'                 : 'error',
     'unicorn/no-abusive-eslint-disable'        : 'error',

@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "test": "node test/index.js",
-    "lint": "eslint --no-ignore --env node --parser-options=ecmaVersion:11 --fix .",
+    "lint": "eslint --no-ignore --no-eslintrc --plugin eslint-plugin-unicorn --config ./index.js --env node,es6 --parser-options=ecmaVersion:11 --fix .",
     "postversion": "git push && git push --tags"
   },
   "repository": {
