@@ -127,7 +127,7 @@ module.exports = {
     'no-self-assign'              : 'error', // eslint:recommended
     'no-self-compare'             : 'error',
     'no-sequences'                : 'error',
-    'no-throw-literal'            : 'error', // eslint:recommended
+    // 'no-throw-literal'            : 'error', // eslint:recommended
     'no-unmodified-loop-condition': 'error',
     'no-unused-expressions'       : 'off', // @see https://github.com/facebook/create-react-app/issues/8107
     'no-unused-labels'            : 'error', // eslint:recommended
