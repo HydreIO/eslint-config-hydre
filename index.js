@@ -462,7 +462,13 @@ module.exports = {
     'unicorn/expiring-todo-comments'           : 'error',
     // 'unicorn/explicit-length-check': 'error',
     'unicorn/filename-case'              :
-      ['error', { case: 'snakeCase' }],
+      ['error',
+        {
+          cases: {
+            snakeCase : true,
+            pascalCase: true,
+          },
+        }],
     // 'unicorn/import-index': 'error', // esm
     'unicorn/new-for-builtins'                 : 'error',
     'unicorn/no-abusive-eslint-disable'        : 'error',
