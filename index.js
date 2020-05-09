@@ -1,20 +1,8 @@
 /* eslint-disable max-lines */
-/* eslint-disable sort-keys */
-const MAX_COMPLEXITY = 10
-const INDENT_ONE = 1
-const INDENT_TWO = 2
-const MAX_DEPTH = 3
-const MAX_NESTED_CB = 3
-const MAX_PARAMS = 3
-const TAB_WIDTH = 2
-const MAX_STATEMENTS_PER_LINE = 2
-const LINE_LEN = 80
-const MAX_LINE = 200
-const MAX_EMPTY_LINE = 2
 const CURLY_NEW_LINE = {
   multiline    : true,
   minProperties: 2,
-  consistent   : false,
+  consistent   : true,
 }
 
 module.exports = {
@@ -73,7 +61,7 @@ module.exports = {
     'array-callback-return'       : 'error',
     'block-scoped-var'            : 'error',
     'class-methods-use-this'      : 'error',
-    'complexity'                  : ['error', MAX_COMPLEXITY],
+    'complexity'                  : ['error', 10],
     'consistent-return'           : 'error',
     'curly'                       : ['error', 'multi-or-nest'],
     'default-case'                : 'error',
@@ -206,20 +194,20 @@ module.exports = {
     // 'id-match': 'off',
     'indent'                   : [
       'error',
-      INDENT_TWO,
+      2,
       {
-        CallExpression     : { arguments: INDENT_TWO },
+        CallExpression     : { arguments: 2 },
         FunctionDeclaration: {
-          body      : INDENT_ONE,
-          parameters: INDENT_TWO,
+          body      : 1,
+          parameters: 2,
         },
         FunctionExpression: {
-          body      : INDENT_ONE,
-          parameters: INDENT_TWO,
+          body      : 1,
+          parameters: 2,
         },
-        MemberExpression: INDENT_TWO,
-        ObjectExpression: INDENT_ONE,
-        SwitchCase      : INDENT_ONE,
+        MemberExpression: 2,
+        ObjectExpression: 1,
+        SwitchCase      : 1,
         ignoredNodes    : ['ConditionalExpression'],
       },
     ],
@@ -238,28 +226,28 @@ module.exports = {
     // 'line-comment-position': 'off',
     'linebreak-style': 'error',
     // 'lines-around-comment': 'off',
-    'max-depth'      : ['warn', MAX_DEPTH],
+    'max-depth'      : ['warn', 3],
     'max-len'        : [
       'error',
       {
-        code      : LINE_LEN,
-        tabWidth  : TAB_WIDTH,
+        code      : 80,
+        tabWidth  : 2,
         ignoreUrls: true,
       },
     ],
     'max-lines': [
       'error',
       {
-        max           : MAX_LINE,
+        max           : 200,
         skipBlankLines: true,
         skipComments  : true,
       },
     ],
-    'max-nested-callbacks'         : ['error', MAX_NESTED_CB],
-    'max-params'                   : ['error', MAX_PARAMS],
+    'max-nested-callbacks'         : ['error', 3],
+    'max-params'                   : ['error', 3],
     // 'max-statements': 'off',
     'max-statements-per-line':
-      ['error', { max: MAX_STATEMENTS_PER_LINE }],
+      ['error', { max: 2 }],
     // 'multiline-ternary': 'off',
     'new-cap'                      : 'error',
     // 'new-parens': 'off',
@@ -272,7 +260,7 @@ module.exports = {
     // 'no-mixed-operators': 'off',
     'no-mixed-spaces-and-tabs'     : 'error', // eslint:recommended
     'no-multi-assign'              : 'error',
-    'no-multiple-empty-lines'      : ['error', { max: MAX_EMPTY_LINE }],
+    'no-multiple-empty-lines'      : ['error', { max: 2 }],
     // 'no-negated-condition': 'off',
     'no-nested-ternary'            : 'error',
     'no-new-object'                : 'error',
