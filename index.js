@@ -295,7 +295,7 @@ module.exports = {
     ],
     // 'one-var-declaration-per-line': 'off',
     // 'operator-assignment': 'off',
-    'operator-linebreak'             : ['error', 'after'],
+    'operator-linebreak'             : ['error', 'before'],
     'padded-blocks'                  : ['error', 'never'],
     'padding-line-between-statements': ['error',
       {
@@ -491,6 +491,6 @@ module.exports = {
     'unicorn/prefer-type-error'                : 'error',
     'unicorn/prevent-abbreviations'            : 'error',
     // 'unicorn/string-content': 'error',
-    'unicorn/throw-new-error'                  : 'error', // <3
+    'unicorn/throw-new-error'                  : 'error',
   },
 }
