@@ -28,12 +28,12 @@
     "url": "https://github.com/usidy/eslint-config-sidy/issues"
   },
   "homepage": "https://github.com/usidy/eslint-config-sidy#readme",
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-plugin-unicorn": "^19.0.1"
-  },
   "peerDependencies": {
-    "eslint": ">=6",
-    "eslint-plugin-unicorn": ">19"
+    "eslint": ">=7",
+    "eslint-plugin-unicorn": ">20"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-plugin-unicorn": "^20.0.0"
   }
 }

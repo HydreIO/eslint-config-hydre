@@ -485,7 +485,7 @@ module.exports = {
         }],
     // 'unicorn/import-index': 'error', // esm
     'unicorn/new-for-builtins'                 : 'error',
-    'unicorn/no-abusive-eslint-disable': 'error',
+    'unicorn/no-abusive-eslint-disable'    : 'error',
     'unicorn/no-array-instanceof'              : 'error',
     'unicorn/no-console-spaces'                : 'error',
     // 'unicorn/no-fn-reference-in-iterator': 'error',
@@ -501,7 +501,7 @@ module.exports = {
     'unicorn/no-unused-properties'             : 'error',
     'unicorn/no-zero-fractions'                : 'error',
     'unicorn/number-literal-case'              : 'error',
-    'unicorn/prefer-add-event-listener': 'error',
+    'unicorn/prefer-add-event-listener'    : 'error',
     'unicorn/prefer-dataset'                   : 'error',
     'unicorn/prefer-event-key'                 : 'error',
     'unicorn/prefer-flat-map'                  : 'error',
@@ -523,6 +523,8 @@ module.exports = {
     'unicorn/prefer-type-error'                : 'error',
     'unicorn/prevent-abbreviations'            : 'error',
     // 'unicorn/string-content': 'error',
-    'unicorn/throw-new-error'                  : 'error',
+    'unicorn/throw-new-error'              : 'error',
+    'unicorn/no-reduce'                    : 'error',
+    'unicorn/prefer-optional-catch-binding': 'error',
   },
 }
