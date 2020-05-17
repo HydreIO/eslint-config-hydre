@@ -416,7 +416,7 @@ module.exports = {
         after : false,
       }],
     'no-class-assign'        : 'error',
-    'no-confusing-arrow'     : 'error',
+    // 'no-confusing-arrow'     : 'error',
     'no-const-assign'        : 'error', // eslint:recommended
     'no-dupe-class-members'  : 'error', // eslint:recommended
     'no-duplicate-imports'   : 'error',
