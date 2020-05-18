@@ -1,8 +1,7 @@
 /* eslint-disable max-lines */
 const CURLY_NEW_LINE = {
   multiline    : true,
-  minProperties: 2,
-  consistent   : true,
+  consistent: true,
 }
 
 module.exports = {
@@ -25,14 +24,13 @@ module.exports = {
     'no-compare-neg-zero'        : 'error', // eslint:recommended
     'no-cond-assign'             : 'error', // eslint:recommended
     // 'no-console': 'error', // eslint:recommended
-    'no-constant-condition': 'error', // eslint:recommended
+    'no-constant-condition'      : 'error', // eslint:recommended
     'no-control-regex'           : 'error', // eslint:recommended
     'no-debugger'                : 'error', // eslint:recommended
     'no-dupe-args'               : 'error', // eslint:recommended
     'no-dupe-keys'               : 'error', // eslint:recommended
     'no-duplicate-case'          : 'error', // eslint:recommended
-    'no-empty'                   : ['error',
-      { allowEmptyCatch: true }],
+    'no-empty'                   : ['error', { allowEmptyCatch: true }],
     'no-empty-character-class'   : 'error', // eslint:recommended
     'no-ex-assign'               : 'error', // eslint:recommended
     'no-extra-boolean-cast'      : 'error', // eslint:recommended
@@ -61,25 +59,21 @@ module.exports = {
     // 'accessor-pairs': 'off',
     'array-callback-return'       : 'error',
     'block-scoped-var'            : 'error',
-    'class-methods-use-this': 'error',
-    'complexity'                  : ['error',
-      10],
-    'consistent-return': 'error',
-    'curly'                       : ['error',
-      'multi-or-nest'],
-    'default-case': 'error',
-    'dot-location': ['error',
-      'property'],
+    'class-methods-use-this'      : 'error',
+    'complexity'                  : ['error', 10],
+    'consistent-return'           : 'error',
+    'curly'                       : ['error', 'multi-or-nest'],
+    'default-case'                : 'error',
+    'dot-location'                : ['error', 'property'],
     'dot-notation'                : 'error',
     'eqeqeq'                      : 'error',
     'guard-for-in'                : 'error',
     // 'no-alert': 'off',
     'no-caller'                   : 'error',
-    'no-case-declarations': 'off', // eslint:recommended
+    'no-case-declarations'        : 'off', // eslint:recommended
     // 'no-div-regex': 'off',
     'no-else-return'              : 'error',
-    'no-empty-function'           : ['error',
-      { allow: ['arrowFunctions'] }],
+    'no-empty-function'           : ['error', { allow: ['arrowFunctions'] }],
     'no-empty-pattern'            : 'error', // eslint:recommended
     'no-eq-null'                  : 'error',
     'no-eval'                     : 'error',
@@ -174,38 +168,31 @@ module.exports = {
     // http://eslint.org/docs/rules/#stylistic-issues
     // ----------------------------------------------
     'array-bracket-newline': 'off', // eslint:recommended
-    'array-bracket-spacing': ['error',
-      'never'],
+    'array-bracket-spacing': ['error', 'never'],
     'array-element-newline': ['error',
       {
         multiline: true,
-        minItems : 1,
       }], // eslint:recommended
-    'block-spacing': ['error',
-      'always'],
-    'brace-style'              : 'error',
-    'camelcase'                : 'off',
+    'block-spacing'                 : ['error', 'always'],
+    'brace-style'                   : 'error',
+    'camelcase'                     : 'off',
     // 'capitalized-comments': 'off',
-    'comma-dangle': ['error',
-      'always-multiline'],
+    'comma-dangle'                  : ['error', 'always-multiline'],
     'comma-spacing'                 : 'error',
     'comma-style'                   : 'error',
-    'computed-property-spacing': 'error',
+    'computed-property-spacing'     : 'error',
     // 'consistent-this': 'off',
     'eol-last'                      : 'error',
     'func-call-spacing'             : 'error',
     // 'func-name-matching': 'off',
     // 'func-names': 'off',
-    'function-paren-newline'   : ['error',
-      { minItems: 2 }],
-    'function-call-argument-newline': ['error',
-      'always'],
-    'func-style': ['error',
-      'expression'],
+    'function-paren-newline'        : ['error', 'multiline'],
+    'function-call-argument-newline': ['error', 'consistent'],
+    'func-style'                    : ['error', 'expression'],
     // 'id-blacklist': 'off',
     // 'id-length': 'off',
     // 'id-match': 'off',
-    'indent': [
+    'indent'                        : [
       'error',
       2,
       {
@@ -239,9 +226,8 @@ module.exports = {
     // 'line-comment-position': 'off',
     'linebreak-style': 'error',
     // 'lines-around-comment': 'off',
-    'max-depth'      : ['warn',
-      3],
-    'max-len': [
+    'max-depth'      : ['warn', 3],
+    'max-len'        : [
       'error',
       {
         code      : 80,
@@ -257,28 +243,24 @@ module.exports = {
         skipComments  : true,
       },
     ],
-    'max-nested-callbacks': ['error',
-      3],
-    'max-params': ['error',
-      3],
+    'max-nested-callbacks'   : ['error', 3],
+    'max-params'             : ['error', 3],
     // 'max-statements': 'off',
     'max-statements-per-line':
-      ['error',
-        { max: 2 }],
+      ['error', { max: 2 }],
     // 'multiline-ternary': 'off',
     // 'new-cap'                      : 'error',
     // 'new-parens': 'off',
-    'newline-per-chained-call': 'error',
+    'newline-per-chained-call'     : 'error',
     'no-array-constructor'         : 'error',
     // 'no-bitwise': 'off',
     // 'no-continue': 'off',
     // 'no-inline-comments': 'off',
     // 'no-lonely-if': 'off',
     // 'no-mixed-operators': 'off',
-    'no-mixed-spaces-and-tabs': 'error', // eslint:recommended
+    'no-mixed-spaces-and-tabs'     : 'error', // eslint:recommended
     'no-multi-assign'              : 'error',
-    'no-multiple-empty-lines'      : ['error',
-      { max: 2 }],
+    'no-multiple-empty-lines'      : ['error', { max: 2 }],
     // 'no-negated-condition': 'off',
     'no-nested-ternary'            : 'error',
     'no-new-object'                : 'error',
@@ -300,11 +282,9 @@ module.exports = {
         ExportDeclaration: CURLY_NEW_LINE,
       },
     ],
-    'object-curly-spacing': ['error',
-      'always'],
+    'object-curly-spacing'   : ['error', 'always'],
     'object-property-newline':
-      ['error',
-        { allowAllPropertiesOnSameLine: false }],
+      ['error', { allowAllPropertiesOnSameLine: false }],
     'one-var': [
       'error',
       {
@@ -315,10 +295,8 @@ module.exports = {
     ],
     // 'one-var-declaration-per-line': 'off',
     // 'operator-assignment': 'off',
-    'operator-linebreak': ['error',
-      'before'],
-    'padded-blocks': ['error',
-      'never'],
+    'operator-linebreak'             : ['error', 'before'],
+    'padded-blocks'                  : ['error', 'never'],
     'padding-line-between-statements': ['error',
       {
         blankLine: 'always',
@@ -366,17 +344,12 @@ module.exports = {
         next     : 'const',
       },
     ],
-    'quote-props': ['error',
-      'consistent'],
-    'quotes':
-      ['error',
-        'single',
-        { allowTemplateLiterals: true }],
-    'semi': ['error',
-      'never'],
-    'semi-spacing': 'error',
-    'semi-style'                 : ['error',
-      'first'],
+    'quote-props': ['error', 'consistent'],
+    'quotes'     :
+      ['error', 'single', { allowTemplateLiterals: true }],
+    'semi'                       : ['error', 'never'],
+    'semi-spacing'               : 'error',
+    'semi-style'                 : ['error', 'first'],
     // 'sort-keys': 'off',
     // 'sort-vars': 'off',
     'space-before-blocks'        : 'error',
@@ -388,11 +361,10 @@ module.exports = {
         named     : 'never',
       },
     ],
-    'space-in-parens': 'error',
-    'space-infix-ops': 'error',
-    'space-unary-ops': 'error',
-    'spaced-comment'      : ['error',
-      'always'],
+    'space-in-parens'     : 'error',
+    'space-infix-ops'     : 'error',
+    'space-unary-ops'     : 'error',
+    'spaced-comment'      : ['error', 'always'],
     'switch-colon-spacing': 'error',
     'template-tag-spacing': 'error',
     // 'unicode-bom': 'off',
@@ -402,8 +374,7 @@ module.exports = {
     // http://eslint.org/docs/rules/#ecmascript-6
     // ------------------------------------------
     // 'arrow-body-style': 'off',
-    'arrow-parens': ['error',
-      'as-needed'],
+    'arrow-parens' : ['error', 'as-needed'],
     'arrow-spacing': ['error',
       {
         before: true,
@@ -429,8 +400,7 @@ module.exports = {
     'no-var'                 : 'error',
     'object-shorthand'       : 'error',
     'prefer-arrow-callback'  : 'error',
-    'prefer-const'           : ['error',
-      { destructuring: 'all' }],
+    'prefer-const'           : ['error', { destructuring: 'all' }],
     'prefer-destructuring'   : 'error',
     'prefer-numeric-literals': 'error',
     'prefer-rest-params'     : 'error',
@@ -440,9 +410,8 @@ module.exports = {
     'rest-spread-spacing'    : 'error',
     // 'sort-imports': 'off',
     'symbol-description'     : 'error',
-    'template-curly-spacing' : ['error',
-      'always'],
-    'yield-star-spacing': ['error',
+    'template-curly-spacing' : ['error', 'always'],
+    'yield-star-spacing'     : ['error',
       {
         before: false,
         after : true,
@@ -453,9 +422,7 @@ module.exports = {
     // ==========================
 
     'lines-between-class-members': [
-      'error',
-      'always',
-      { exceptAfterSingleLine: true },
+      'error', 'always', { exceptAfterSingleLine: true },
     ],
     'require-atomic-updates': 'error',
     'max-classes-per-file'  : 'error',
