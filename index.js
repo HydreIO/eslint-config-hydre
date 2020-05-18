@@ -266,7 +266,7 @@ module.exports = {
       ['error',
         { max: 2 }],
     // 'multiline-ternary': 'off',
-    'new-cap'                      : 'error',
+    // 'new-cap'                      : 'error',
     // 'new-parens': 'off',
     'newline-per-chained-call': 'error',
     'no-array-constructor'         : 'error',
