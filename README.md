@@ -43,28 +43,14 @@ parser: babel-eslint
 parserOptions:
   sourceType: module
   configFile: package.json
+  ecmaVersion: 11
 ```
 
-Even though we doesn't use babel, we need to parse
-an experimental syntaxe thus need to add inside the
-package.json this snippet
+## format
+
+we suggest using `prettier-eslint-cli`
 
 ```json
-  "babel": {
-    "parserOpts": {
-      "allowAwaitOutsideFunction": true
-    },
-    "plugins": [
-      "@babel/plugin-proposal-class-properties"
-    ]
-  },
-```
-
-### Advanced script
-
-```json
-"test": "node test/index.js",
-"coverage": "c8 --check-coverage node test/index.js",
 "lint": "prettier-eslint $PWD/\"**/*.js\" --print-width 60 --list-different && eslint --color .",
 "format": "prettier-eslint $PWD/\"**/*.js\" --print-width 60 --write",
 ```
