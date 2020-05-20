@@ -16,10 +16,11 @@
 ## Install
 
 ```sh
-npm install -D @sidy/eslint-config-sidy
-
-# or full
-npm install -D eslint babel-eslint eslint-plugin-unicorn @sidy/eslint-config-sidy
+npm install -D \
+  eslint \
+  babel-eslint@next \
+  eslint-plugin-unicorn \
+  @sidy/eslint-config-sidy
 ```
 
 ## Usage
@@ -29,7 +30,7 @@ Add to your `.eslintrc.yml` file
 ```yml
 env:
   node: true
-  es6: true
+  es2020: true
 plugins:
   - unicorn
 extends:
@@ -37,8 +38,33 @@ extends:
 globals:
   Atomics: readonly
   SharedArrayBuffer: readonly
-parser: babel-eslint # to use optional chaining and other cool stuff
+# Nodejs support some experimental ecma features but not eslint
+parser: babel-eslint
 parserOptions:
-  ecmaVersion: 2020
   sourceType: module
+  configFile: package.json
+```
+
+Even though we doesn't use babel, we need to parse
+an experimental syntaxe thus need to add inside the
+package.json this snippet
+
+```json
+  "babel": {
+    "parserOpts": {
+      "allowAwaitOutsideFunction": true
+    },
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
+```
+
+### Advanced script
+
+```json
+"test": "node test/index.js",
+"coverage": "c8 --check-coverage node test/index.js",
+"lint": "prettier-eslint $PWD/\"**/*.js\" --print-width 60 --list-different && eslint --color .",
+"format": "prettier-eslint $PWD/\"**/*.js\" --print-width 60 --write",
 ```
