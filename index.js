@@ -244,7 +244,7 @@ module.exports = {
       },
     ],
     'max-nested-callbacks'   : ['error', 3],
-    'max-params'             : ['error', 3],
+    'max-params'             : ['error', 4],
     // 'max-statements': 'off',
     'max-statements-per-line':
       ['error', { max: 2 }],
