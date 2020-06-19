@@ -167,12 +167,9 @@ module.exports = {
     // Stylistic Issues
     // http://eslint.org/docs/rules/#stylistic-issues
     // ----------------------------------------------
-    'array-bracket-newline': 'off', // eslint:recommended
-    'array-bracket-spacing': ['error', 'never'],
-    'array-element-newline': ['error',
-      {
-        multiline: true,
-      }], // eslint:recommended
+    'array-bracket-newline'         : 'off', // eslint:recommended
+    'array-bracket-spacing'         : ['error', 'never'],
+    'array-element-newline'         : ['error', 'consistent'],
     'block-spacing'                 : ['error', 'always'],
     'brace-style'                   : 'error',
     'camelcase'                     : 'off',
