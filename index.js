@@ -458,7 +458,7 @@ module.exports = {
     'unicorn/no-keyword-prefix'                : 'error',
     'unicorn/no-nested-ternary'                : 'error',
     'unicorn/no-new-buffer'                    : 'error',
-    'unicorn/no-null'                          : 'error',
+    // 'unicorn/no-null'                          : 'error',
     'unicorn/no-process-exit'                  : 'error',
     // 'unicorn/no-unreadable-array-destructuring': 'error',
     'unicorn/no-unsafe-regex'                  : 'error',
