@@ -10,7 +10,7 @@
 
 <h3 align=center>A strict opinionated ESLint shareable config for the Sidy JavaScript style guide</h3>
 <p align=center>
-  <img height=300 src="https://i.imgur.com/AExNHrg.png"/>
+  <img height=300 src="https://i.imgur.com/mc4VguS.png"/>
 </p>
 
 ## Install
