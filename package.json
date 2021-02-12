@@ -1,6 +1,6 @@
 {
   "name": "@hydre/eslint-config-hydre",
-  "version": "1.4.16",
+  "version": "1.4.17",
   "description": "A strict opinionated ESLint shareable config for the Hydre JavaScript style guide",
   "files": [
     "index.js"
