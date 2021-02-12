@@ -1,7 +1,7 @@
 {
-  "name": "@sidy/eslint-config-sidy",
+  "name": "@hydre/eslint-config-hydre",
   "version": "1.4.15",
-  "description": "A strict opinionated ESLint shareable config for the Sidy JavaScript style guide",
+  "description": "A strict opinionated ESLint shareable config for the Hydre JavaScript style guide",
   "files": [
     "index.js"
   ],
@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/usidy/eslint-config-sidy.git"
+    "url": "git+ssh://git@github.com/hydreio/eslint-config-hydre.git"
   },
   "keywords": [
     "eslint",
     "eslintconfig",
-    "sidy"
+    "hydre"
   ],
   "license": "UNLICENSE",
   "publishConfig": {
@@ -25,9 +25,9 @@
   },
   "author": "sidy",
   "bugs": {
-    "url": "https://github.com/usidy/eslint-config-sidy/issues"
+    "url": "https://github.com/hydreio/eslint-config-hydre/issues"
   },
-  "homepage": "https://github.com/usidy/eslint-config-sidy#readme",
+  "homepage": "https://github.com/hydreio/eslint-config-hydre#readme",
   "dependencies": {
     "eslint": "^7.5.0",
     "eslint-plugin-unicorn": "^21.0.0"
